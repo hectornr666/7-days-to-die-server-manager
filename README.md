@@ -22,7 +22,7 @@
 
 ## Installation
 
-Experience running Node.js apps is recommended. CSMM is tested on and developed for Linux. It will *probably* also work on Windows.
+Experience running Node.js apps is recommended. 
 
 ### Prerequisites
 
@@ -56,14 +56,17 @@ Experience running Node.js apps is recommended. CSMM is tested on and developed 
 DBSTRING=mysql2://[USER]:[PASSWORD]@localhost:3306/[DATABASE_NAME]
 ```
 
-CSMM_HOSTNAME is used to generate links, CORS and other things. You should set this to the ip/domain you will access CSMM from. For example `CSMM_HOSTNAME=http://localhost:1337` or `CSMM_HOSTNAME=https://csmm.yourserver.com` **DO NOT ADD A TRAILING SLASH**
+    CSMM_HOSTNAME is used to generate links, CORS and other things. You should set this to the ip/domain you will access CSMM from. For example `CSMM_HOSTNAME=http://localhost:1337` or `CSMM_HOSTNAME=https://csmm.yourserver.com` **DO NOT ADD A TRAILING SLASH**
 
-You are now ready to start the application! 🎉 Run `node app.js` to start it.
+ 4. Add redis support
 
-### Optional: Add redis support
+    [Redis](https://redis.io/) is used for caching values and storing sessions. To enable redis support, add `REDISSTRING=redis://localhost:6379` to your env file.
 
-[Redis](https://redis.io/) is used for caching values and storing sessions. To enable redis support, add `REDISSTRING=redis://localhost:6379` to your env file.
+  5. Put the app in production mode. This is done by setting the env variable NODE_ENV=production
 
+You are now ready to start the application! 🎉 Run `npm start` to start it. 
+
+*Note: Windows users will have to start the app with `node app.js`.*
 
 ## Documentation
 
